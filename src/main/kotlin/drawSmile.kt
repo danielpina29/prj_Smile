@@ -1,6 +1,6 @@
 import pt.isel.canvas.*
 
-private fun drawLEye (smile: Smile) {
+private fun drawLEye (smile: Smile, canvas: Canvas) {
     canvas.drawCircle(
         xCenter = ((smile.x) - (0.35 * smile.radius)).toInt(),
         yCenter = ((smile.y) - (0.35 * smile.radius)).toInt(),
@@ -9,7 +9,7 @@ private fun drawLEye (smile: Smile) {
     )
 }
 
-private fun drawREye (smile: Smile) {
+private fun drawREye (smile: Smile, canvas: Canvas) {
     canvas.drawCircle(
         xCenter = ((smile.x) + (0.35 * smile.radius)).toInt(),
         yCenter = ((smile.y) - (0.35 * smile.radius)).toInt(),
@@ -18,7 +18,7 @@ private fun drawREye (smile: Smile) {
     )
 }
 
-private fun drawMouth(smile: Smile) {
+private fun drawMouth(smile: Smile, canvas: Canvas) {
     canvas.drawArc(
         xCenter = smile.x,
         yCenter = smile.y,
@@ -30,7 +30,7 @@ private fun drawMouth(smile: Smile) {
     )
 }
 
-private fun outline(smile: Smile) {
+private fun outline(smile: Smile, canvas: Canvas) {
     canvas.drawCircle(
         xCenter = smile.x,
         yCenter = smile.y,
@@ -40,7 +40,7 @@ private fun outline(smile: Smile) {
     )
 }
 
-private fun paintSmile (smile: Smile) {
+private fun paintSmile (smile: Smile, canvas: Canvas) {
     canvas.drawCircle(
         xCenter = smile.x,
         yCenter = smile.y,
@@ -49,10 +49,10 @@ private fun paintSmile (smile: Smile) {
     )
 }
 
-fun drawSmile(smile: Smile) {
-    paintSmile(smile)
-    drawLEye(smile)
-    drawREye(smile)
-    drawMouth(smile)
-    outline(smile)
+fun drawSmile(smile: Smile, canvas: Canvas) {
+    paintSmile(smile, canvas)
+    drawLEye(smile, canvas)
+    drawREye(smile, canvas)
+    drawMouth(smile, canvas)
+    outline(smile, canvas)
 }
