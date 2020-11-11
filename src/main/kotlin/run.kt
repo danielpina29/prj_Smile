@@ -10,7 +10,7 @@ import pt.isel.canvas.*
 data class Smile(val x: Int, val y: Int, val radius: Int)
 
 /**
- *This private constants, set the parameters which the smile is modified.
+ *This private constants, set the parameters which the smile is modified on.
  */
 
 private const val UP_KEY_CODE = 38
@@ -26,7 +26,7 @@ private const val DELTA_RADIUS = 1
 
 fun run() {
     onStart {
-        val canvas: Canvas = Canvas(800, 400, CYAN)
+        val canvas = Canvas(800, 400, CYAN)
         var smile = Smile(x = canvas.width / 2, y = canvas.height / 2, radius = 50)
         drawSmile(smile, canvas)
         canvas.onKeyPressed {
