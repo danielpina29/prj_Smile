@@ -17,7 +17,7 @@ private const val DELTA_RADIUS = 1
 
 fun actions (canvas: Canvas) {
     onStart {
-        var smile: Smile = Smile(x = canvas.width / 2, y = canvas.height / 2, radius = 50)
+        var smile = Smile(x = canvas.width / 2, y = canvas.height / 2, radius = 50)
         drawSmile(smile)
         canvas.onKeyPressed {
             when (it.char) {
