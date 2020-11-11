@@ -12,7 +12,7 @@ private const val  DELTA_CURSOR = 4
 private const val DELTA_RADIUS = 1
 
 /**
- *The function action
+ *The function actions has the job of drawing new smiles based on user actions both on keyboard and mouse.
  */
 
 fun actions (canvas: Canvas) {
